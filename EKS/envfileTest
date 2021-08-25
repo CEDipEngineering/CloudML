@@ -1,0 +1,8 @@
+layersTypes= Dense Dropout Dense Dropout Dense 
+layersSizes= 64 0.5 64 0.5 1
+layersActivations= relu None relu None sigmoid
+epochs= 3
+batch_size= 128 
+experiment_name= mlflow_experiment_docker 
+master_ip= http://3.15.174.186:5000
+MLFLOW_TRACKING_URI=http://3.15.174.186:5000

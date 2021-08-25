@@ -1,0 +1,611 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: ml-kube
+  namespace: docker-exp-24
+spec:
+  backoffLimit: 2
+  template:
+    spec:
+      restartPolicy: Never
+      containers:
+      - name: experiment-0
+        image: public.ecr.aws/q1b7b4u6/cedipengineering/docker_ml_ecr:latest
+        ports:
+        - containerPort: 80
+        env:
+        - name: MLFLOW_TRACKING_URI
+          value: http://3.143.228.222:5000
+        - name: experiment_name
+          value: mlflow_measurement_eks_24_exp
+        - name: layersTypes
+          value: Dense Dropout Dense Dropout Dense
+        - name: layersSizes
+          value: 64 0.5 64 0.5 1
+        - name: layersActivations
+          value: relu None relu None sigmoid
+        - name: epochs
+          value: '3'
+        - name: batch_size
+          value: '128'
+        - name: master_ip
+          value: http://3.143.228.222:5000
+        command:
+        - python3
+        args:
+        - ./docker_exec_file/runner.py
+      - name: experiment-1
+        image: public.ecr.aws/q1b7b4u6/cedipengineering/docker_ml_ecr:latest
+        ports:
+        - containerPort: 80
+        env:
+        - name: MLFLOW_TRACKING_URI
+          value: http://3.143.228.222:5000
+        - name: experiment_name
+          value: mlflow_measurement_eks_24_exp
+        - name: layersTypes
+          value: Dense Dropout Dense Dropout Dense
+        - name: layersSizes
+          value: 64 0.5 64 0.5 1
+        - name: layersActivations
+          value: relu None relu None sigmoid
+        - name: epochs
+          value: '3'
+        - name: batch_size
+          value: '128'
+        - name: master_ip
+          value: http://3.143.228.222:5000
+        command:
+        - python3
+        args:
+        - ./docker_exec_file/runner.py
+      - name: experiment-2
+        image: public.ecr.aws/q1b7b4u6/cedipengineering/docker_ml_ecr:latest
+        ports:
+        - containerPort: 80
+        env:
+        - name: MLFLOW_TRACKING_URI
+          value: http://3.143.228.222:5000
+        - name: experiment_name
+          value: mlflow_measurement_eks_24_exp
+        - name: layersTypes
+          value: Dense Dropout Dense Dropout Dense
+        - name: layersSizes
+          value: 64 0.5 64 0.5 1
+        - name: layersActivations
+          value: relu None relu None sigmoid
+        - name: epochs
+          value: '3'
+        - name: batch_size
+          value: '128'
+        - name: master_ip
+          value: http://3.143.228.222:5000
+        command:
+        - python3
+        args:
+        - ./docker_exec_file/runner.py
+      - name: experiment-3
+        image: public.ecr.aws/q1b7b4u6/cedipengineering/docker_ml_ecr:latest
+        ports:
+        - containerPort: 80
+        env:
+        - name: MLFLOW_TRACKING_URI
+          value: http://3.143.228.222:5000
+        - name: experiment_name
+          value: mlflow_measurement_eks_24_exp
+        - name: layersTypes
+          value: Dense Dropout Dense Dropout Dense
+        - name: layersSizes
+          value: 64 0.5 64 0.5 1
+        - name: layersActivations
+          value: relu None relu None sigmoid
+        - name: epochs
+          value: '3'
+        - name: batch_size
+          value: '128'
+        - name: master_ip
+          value: http://3.143.228.222:5000
+        command:
+        - python3
+        args:
+        - ./docker_exec_file/runner.py
+      - name: experiment-4
+        image: public.ecr.aws/q1b7b4u6/cedipengineering/docker_ml_ecr:latest
+        ports:
+        - containerPort: 80
+        env:
+        - name: MLFLOW_TRACKING_URI
+          value: http://3.143.228.222:5000
+        - name: experiment_name
+          value: mlflow_measurement_eks_24_exp
+        - name: layersTypes
+          value: Dense Dropout Dense Dropout Dense
+        - name: layersSizes
+          value: 64 0.5 64 0.5 1
+        - name: layersActivations
+          value: relu None relu None sigmoid
+        - name: epochs
+          value: '3'
+        - name: batch_size
+          value: '128'
+        - name: master_ip
+          value: http://3.143.228.222:5000
+        command:
+        - python3
+        args:
+        - ./docker_exec_file/runner.py
+      - name: experiment-5
+        image: public.ecr.aws/q1b7b4u6/cedipengineering/docker_ml_ecr:latest
+        ports:
+        - containerPort: 80
+        env:
+        - name: MLFLOW_TRACKING_URI
+          value: http://3.143.228.222:5000
+        - name: experiment_name
+          value: mlflow_measurement_eks_24_exp
+        - name: layersTypes
+          value: Dense Dropout Dense Dropout Dense
+        - name: layersSizes
+          value: 64 0.5 64 0.5 1
+        - name: layersActivations
+          value: relu None relu None sigmoid
+        - name: epochs
+          value: '3'
+        - name: batch_size
+          value: '128'
+        - name: master_ip
+          value: http://3.143.228.222:5000
+        command:
+        - python3
+        args:
+        - ./docker_exec_file/runner.py
+      - name: experiment-6
+        image: public.ecr.aws/q1b7b4u6/cedipengineering/docker_ml_ecr:latest
+        ports:
+        - containerPort: 80
+        env:
+        - name: MLFLOW_TRACKING_URI
+          value: http://3.143.228.222:5000
+        - name: experiment_name
+          value: mlflow_measurement_eks_24_exp
+        - name: layersTypes
+          value: Dense Dropout Dense Dropout Dense
+        - name: layersSizes
+          value: 64 0.5 64 0.5 1
+        - name: layersActivations
+          value: relu None relu None sigmoid
+        - name: epochs
+          value: '3'
+        - name: batch_size
+          value: '128'
+        - name: master_ip
+          value: http://3.143.228.222:5000
+        command:
+        - python3
+        args:
+        - ./docker_exec_file/runner.py
+      - name: experiment-7
+        image: public.ecr.aws/q1b7b4u6/cedipengineering/docker_ml_ecr:latest
+        ports:
+        - containerPort: 80
+        env:
+        - name: MLFLOW_TRACKING_URI
+          value: http://3.143.228.222:5000
+        - name: experiment_name
+          value: mlflow_measurement_eks_24_exp
+        - name: layersTypes
+          value: Dense Dropout Dense Dropout Dense
+        - name: layersSizes
+          value: 64 0.5 64 0.5 1
+        - name: layersActivations
+          value: relu None relu None sigmoid
+        - name: epochs
+          value: '3'
+        - name: batch_size
+          value: '128'
+        - name: master_ip
+          value: http://3.143.228.222:5000
+        command:
+        - python3
+        args:
+        - ./docker_exec_file/runner.py
+      - name: experiment-8
+        image: public.ecr.aws/q1b7b4u6/cedipengineering/docker_ml_ecr:latest
+        ports:
+        - containerPort: 80
+        env:
+        - name: MLFLOW_TRACKING_URI
+          value: http://3.143.228.222:5000
+        - name: experiment_name
+          value: mlflow_measurement_eks_24_exp
+        - name: layersTypes
+          value: Dense Dropout Dense Dropout Dense
+        - name: layersSizes
+          value: 64 0.5 64 0.5 1
+        - name: layersActivations
+          value: relu None relu None sigmoid
+        - name: epochs
+          value: '3'
+        - name: batch_size
+          value: '128'
+        - name: master_ip
+          value: http://3.143.228.222:5000
+        command:
+        - python3
+        args:
+        - ./docker_exec_file/runner.py
+      - name: experiment-9
+        image: public.ecr.aws/q1b7b4u6/cedipengineering/docker_ml_ecr:latest
+        ports:
+        - containerPort: 80
+        env:
+        - name: MLFLOW_TRACKING_URI
+          value: http://3.143.228.222:5000
+        - name: experiment_name
+          value: mlflow_measurement_eks_24_exp
+        - name: layersTypes
+          value: Dense Dropout Dense Dropout Dense
+        - name: layersSizes
+          value: 64 0.5 64 0.5 1
+        - name: layersActivations
+          value: relu None relu None sigmoid
+        - name: epochs
+          value: '3'
+        - name: batch_size
+          value: '128'
+        - name: master_ip
+          value: http://3.143.228.222:5000
+        command:
+        - python3
+        args:
+        - ./docker_exec_file/runner.py
+      - name: experiment-10
+        image: public.ecr.aws/q1b7b4u6/cedipengineering/docker_ml_ecr:latest
+        ports:
+        - containerPort: 80
+        env:
+        - name: MLFLOW_TRACKING_URI
+          value: http://3.143.228.222:5000
+        - name: experiment_name
+          value: mlflow_measurement_eks_24_exp
+        - name: layersTypes
+          value: Dense Dropout Dense Dropout Dense
+        - name: layersSizes
+          value: 64 0.5 64 0.5 1
+        - name: layersActivations
+          value: relu None relu None sigmoid
+        - name: epochs
+          value: '3'
+        - name: batch_size
+          value: '128'
+        - name: master_ip
+          value: http://3.143.228.222:5000
+        command:
+        - python3
+        args:
+        - ./docker_exec_file/runner.py
+      - name: experiment-11
+        image: public.ecr.aws/q1b7b4u6/cedipengineering/docker_ml_ecr:latest
+        ports:
+        - containerPort: 80
+        env:
+        - name: MLFLOW_TRACKING_URI
+          value: http://3.143.228.222:5000
+        - name: experiment_name
+          value: mlflow_measurement_eks_24_exp
+        - name: layersTypes
+          value: Dense Dropout Dense Dropout Dense
+        - name: layersSizes
+          value: 64 0.5 64 0.5 1
+        - name: layersActivations
+          value: relu None relu None sigmoid
+        - name: epochs
+          value: '3'
+        - name: batch_size
+          value: '128'
+        - name: master_ip
+          value: http://3.143.228.222:5000
+        command:
+        - python3
+        args:
+        - ./docker_exec_file/runner.py
+      - name: experiment-12
+        image: public.ecr.aws/q1b7b4u6/cedipengineering/docker_ml_ecr:latest
+        ports:
+        - containerPort: 80
+        env:
+        - name: MLFLOW_TRACKING_URI
+          value: http://3.143.228.222:5000
+        - name: experiment_name
+          value: mlflow_measurement_eks_24_exp
+        - name: layersTypes
+          value: Dense Dropout Dense Dropout Dense
+        - name: layersSizes
+          value: 64 0.5 64 0.5 1
+        - name: layersActivations
+          value: relu None relu None sigmoid
+        - name: epochs
+          value: '3'
+        - name: batch_size
+          value: '128'
+        - name: master_ip
+          value: http://3.143.228.222:5000
+        command:
+        - python3
+        args:
+        - ./docker_exec_file/runner.py
+      - name: experiment-13
+        image: public.ecr.aws/q1b7b4u6/cedipengineering/docker_ml_ecr:latest
+        ports:
+        - containerPort: 80
+        env:
+        - name: MLFLOW_TRACKING_URI
+          value: http://3.143.228.222:5000
+        - name: experiment_name
+          value: mlflow_measurement_eks_24_exp
+        - name: layersTypes
+          value: Dense Dropout Dense Dropout Dense
+        - name: layersSizes
+          value: 64 0.5 64 0.5 1
+        - name: layersActivations
+          value: relu None relu None sigmoid
+        - name: epochs
+          value: '3'
+        - name: batch_size
+          value: '128'
+        - name: master_ip
+          value: http://3.143.228.222:5000
+        command:
+        - python3
+        args:
+        - ./docker_exec_file/runner.py
+      - name: experiment-14
+        image: public.ecr.aws/q1b7b4u6/cedipengineering/docker_ml_ecr:latest
+        ports:
+        - containerPort: 80
+        env:
+        - name: MLFLOW_TRACKING_URI
+          value: http://3.143.228.222:5000
+        - name: experiment_name
+          value: mlflow_measurement_eks_24_exp
+        - name: layersTypes
+          value: Dense Dropout Dense Dropout Dense
+        - name: layersSizes
+          value: 64 0.5 64 0.5 1
+        - name: layersActivations
+          value: relu None relu None sigmoid
+        - name: epochs
+          value: '3'
+        - name: batch_size
+          value: '128'
+        - name: master_ip
+          value: http://3.143.228.222:5000
+        command:
+        - python3
+        args:
+        - ./docker_exec_file/runner.py
+      - name: experiment-15
+        image: public.ecr.aws/q1b7b4u6/cedipengineering/docker_ml_ecr:latest
+        ports:
+        - containerPort: 80
+        env:
+        - name: MLFLOW_TRACKING_URI
+          value: http://3.143.228.222:5000
+        - name: experiment_name
+          value: mlflow_measurement_eks_24_exp
+        - name: layersTypes
+          value: Dense Dropout Dense Dropout Dense
+        - name: layersSizes
+          value: 64 0.5 64 0.5 1
+        - name: layersActivations
+          value: relu None relu None sigmoid
+        - name: epochs
+          value: '3'
+        - name: batch_size
+          value: '128'
+        - name: master_ip
+          value: http://3.143.228.222:5000
+        command:
+        - python3
+        args:
+        - ./docker_exec_file/runner.py
+      - name: experiment-16
+        image: public.ecr.aws/q1b7b4u6/cedipengineering/docker_ml_ecr:latest
+        ports:
+        - containerPort: 80
+        env:
+        - name: MLFLOW_TRACKING_URI
+          value: http://3.143.228.222:5000
+        - name: experiment_name
+          value: mlflow_measurement_eks_24_exp
+        - name: layersTypes
+          value: Dense Dropout Dense Dropout Dense
+        - name: layersSizes
+          value: 64 0.5 64 0.5 1
+        - name: layersActivations
+          value: relu None relu None sigmoid
+        - name: epochs
+          value: '3'
+        - name: batch_size
+          value: '128'
+        - name: master_ip
+          value: http://3.143.228.222:5000
+        command:
+        - python3
+        args:
+        - ./docker_exec_file/runner.py
+      - name: experiment-17
+        image: public.ecr.aws/q1b7b4u6/cedipengineering/docker_ml_ecr:latest
+        ports:
+        - containerPort: 80
+        env:
+        - name: MLFLOW_TRACKING_URI
+          value: http://3.143.228.222:5000
+        - name: experiment_name
+          value: mlflow_measurement_eks_24_exp
+        - name: layersTypes
+          value: Dense Dropout Dense Dropout Dense
+        - name: layersSizes
+          value: 64 0.5 64 0.5 1
+        - name: layersActivations
+          value: relu None relu None sigmoid
+        - name: epochs
+          value: '3'
+        - name: batch_size
+          value: '128'
+        - name: master_ip
+          value: http://3.143.228.222:5000
+        command:
+        - python3
+        args:
+        - ./docker_exec_file/runner.py
+      - name: experiment-18
+        image: public.ecr.aws/q1b7b4u6/cedipengineering/docker_ml_ecr:latest
+        ports:
+        - containerPort: 80
+        env:
+        - name: MLFLOW_TRACKING_URI
+          value: http://3.143.228.222:5000
+        - name: experiment_name
+          value: mlflow_measurement_eks_24_exp
+        - name: layersTypes
+          value: Dense Dropout Dense Dropout Dense
+        - name: layersSizes
+          value: 64 0.5 64 0.5 1
+        - name: layersActivations
+          value: relu None relu None sigmoid
+        - name: epochs
+          value: '3'
+        - name: batch_size
+          value: '128'
+        - name: master_ip
+          value: http://3.143.228.222:5000
+        command:
+        - python3
+        args:
+        - ./docker_exec_file/runner.py
+      - name: experiment-19
+        image: public.ecr.aws/q1b7b4u6/cedipengineering/docker_ml_ecr:latest
+        ports:
+        - containerPort: 80
+        env:
+        - name: MLFLOW_TRACKING_URI
+          value: http://3.143.228.222:5000
+        - name: experiment_name
+          value: mlflow_measurement_eks_24_exp
+        - name: layersTypes
+          value: Dense Dropout Dense Dropout Dense
+        - name: layersSizes
+          value: 64 0.5 64 0.5 1
+        - name: layersActivations
+          value: relu None relu None sigmoid
+        - name: epochs
+          value: '3'
+        - name: batch_size
+          value: '128'
+        - name: master_ip
+          value: http://3.143.228.222:5000
+        command:
+        - python3
+        args:
+        - ./docker_exec_file/runner.py
+      - name: experiment-20
+        image: public.ecr.aws/q1b7b4u6/cedipengineering/docker_ml_ecr:latest
+        ports:
+        - containerPort: 80
+        env:
+        - name: MLFLOW_TRACKING_URI
+          value: http://3.143.228.222:5000
+        - name: experiment_name
+          value: mlflow_measurement_eks_24_exp
+        - name: layersTypes
+          value: Dense Dropout Dense Dropout Dense
+        - name: layersSizes
+          value: 64 0.5 64 0.5 1
+        - name: layersActivations
+          value: relu None relu None sigmoid
+        - name: epochs
+          value: '3'
+        - name: batch_size
+          value: '128'
+        - name: master_ip
+          value: http://3.143.228.222:5000
+        command:
+        - python3
+        args:
+        - ./docker_exec_file/runner.py
+      - name: experiment-21
+        image: public.ecr.aws/q1b7b4u6/cedipengineering/docker_ml_ecr:latest
+        ports:
+        - containerPort: 80
+        env:
+        - name: MLFLOW_TRACKING_URI
+          value: http://3.143.228.222:5000
+        - name: experiment_name
+          value: mlflow_measurement_eks_24_exp
+        - name: layersTypes
+          value: Dense Dropout Dense Dropout Dense
+        - name: layersSizes
+          value: 64 0.5 64 0.5 1
+        - name: layersActivations
+          value: relu None relu None sigmoid
+        - name: epochs
+          value: '3'
+        - name: batch_size
+          value: '128'
+        - name: master_ip
+          value: http://3.143.228.222:5000
+        command:
+        - python3
+        args:
+        - ./docker_exec_file/runner.py
+      - name: experiment-22
+        image: public.ecr.aws/q1b7b4u6/cedipengineering/docker_ml_ecr:latest
+        ports:
+        - containerPort: 80
+        env:
+        - name: MLFLOW_TRACKING_URI
+          value: http://3.143.228.222:5000
+        - name: experiment_name
+          value: mlflow_measurement_eks_24_exp
+        - name: layersTypes
+          value: Dense Dropout Dense Dropout Dense
+        - name: layersSizes
+          value: 64 0.5 64 0.5 1
+        - name: layersActivations
+          value: relu None relu None sigmoid
+        - name: epochs
+          value: '3'
+        - name: batch_size
+          value: '128'
+        - name: master_ip
+          value: http://3.143.228.222:5000
+        command:
+        - python3
+        args:
+        - ./docker_exec_file/runner.py
+      - name: experiment-23
+        image: public.ecr.aws/q1b7b4u6/cedipengineering/docker_ml_ecr:latest
+        ports:
+        - containerPort: 80
+        env:
+        - name: MLFLOW_TRACKING_URI
+          value: http://3.143.228.222:5000
+        - name: experiment_name
+          value: mlflow_measurement_eks_24_exp
+        - name: layersTypes
+          value: Dense Dropout Dense Dropout Dense
+        - name: layersSizes
+          value: 64 0.5 64 0.5 1
+        - name: layersActivations
+          value: relu None relu None sigmoid
+        - name: epochs
+          value: '3'
+        - name: batch_size
+          value: '128'
+        - name: master_ip
+          value: http://3.143.228.222:5000
+        command:
+        - python3
+        args:
+        - ./docker_exec_file/runner.py

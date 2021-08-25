@@ -1,0 +1,10 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: ml-kube
+  namespace: docker-exp-4
+spec:
+  backoffLimit: 2
+  template:
+    spec:      
+      restartPolicy: Never
