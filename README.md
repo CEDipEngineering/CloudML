@@ -1,5 +1,7 @@
 # CloudML
 
+**The Neural Network model being trained was not made by me! At most I slightly adapated some parts of it. All credit for the example of ML workload goes to https://jhui.github.io/2018/02/11/Keras-tutorial/.** 
+
 Project for parallel invocation of machine learning in Cloud environments such as AWS Lambda and EKS. MLFlow is used as tool for metric collection and analysis.
 
 This project was done on my windows 10 computer, and as such has no garantees for working at all on Linux or Mac. Although it probably would work fine with minor changes.
